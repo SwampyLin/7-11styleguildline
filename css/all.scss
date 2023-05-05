@@ -1,0 +1,164 @@
+$color-primary: #008163;
+$color-warning: #f4811f;
+$color-light: #f3f7f7;
+$color-danger: #ee2526;
+$font-base-size: 10px;
+$max-content-width: 768px;
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+html,
+body {
+  padding: unset;
+  margin: unset;
+  font-family: 'Exo', 微軟正黑體;
+}
+
+.header {
+  height: 300px;
+  background-color: $color-warning;
+  position: relative;
+  .icon {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.section {
+  padding: 50px;
+  &-light {
+    background: $color-light;
+    color: $color-danger;
+    .english {
+      color: $color-danger;
+    }
+  }
+  &-dark {
+    .english {
+      color: $color-primary;
+    }
+  }
+  &-danger {
+    background: $color-danger;
+    color: $color-light;
+  }
+  &-warning {
+    background: $color-warning;
+    color: $color-light;
+  }
+}
+
+.container {
+  max-width: $max-content-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//字體
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: unset;
+}
+
+h1 {
+  font-size: $font-base-size * 4;
+  &.english {
+    font-size: $font-base-size * 2.4;
+  }
+  &.thin {
+    font-weight: 500;
+  }
+}
+
+h2 {
+  font-size: $font-base-size * 3;
+  &:first-of-type:before {
+    content: '';
+    border: solid 3px $color-primary;
+    width: 100px;
+    display: block;
+    position: relative;
+  }
+  &.english {
+    font-size: $font-base-size * 1.6;
+  }
+  &.thin {
+    font-weight: 500;
+  }
+}
+
+h3 {
+  font-size: $font-base-size * 2;
+  &.english {
+    font-size: $font-base-size * 1.2;
+  }
+  &.thin {
+    font-weight: 500;
+  }
+}
+//按鈕
+.button {
+  padding: 5px 25px;
+  display: inline-block;
+  margin-right: 10px;
+  letter-spacing: 2px;
+  font-size: $font-base-size * 1.5;
+  font-weight: bold;
+  border: solid 1px $color-warning;
+  &-dark {
+    border-color: $color-light;
+    font-weight: 500;
+  }
+  &-warning {
+    background: $color-warning;
+    color: $color-light;
+    font-weight: 500;
+  }
+  &-primary {
+    background: $color-primary;
+    color: $color-light;
+  }
+  &-danger {
+    background: $color-danger;
+    color: $color-light;
+  }
+}
+//color
+.color-chip {
+  display: inline-block;
+  margin-right: 25px;
+}
+.color-tag {
+  width: 70px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.color-block {
+  @include size(35px, 35px);
+  border: solid 2px white;
+  display: inline-block;
+  vertical-align: middle;
+  &-primary {
+    background-color: $color-primary;
+  }
+  &-warning {
+    background-color: $color-warning;
+  }
+  &-light {
+    background-color: $color-light;
+  }
+  &-danger {
+    background-color: $color-danger;
+  }
+}

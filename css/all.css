@@ -1,0 +1,153 @@
+@charset "UTF-8";
+html,
+body {
+  padding: unset;
+  margin: unset;
+  font-family: "Exo", 微軟正黑體;
+}
+
+.header {
+  height: 300px;
+  background-color: #f4811f;
+  position: relative;
+}
+.header .icon {
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section {
+  padding: 50px;
+}
+.section-light {
+  background: #f3f7f7;
+  color: #ee2526;
+}
+.section-light .english {
+  color: #ee2526;
+}
+.section-dark .english {
+  color: #008163;
+}
+.section-danger {
+  background: #ee2526;
+  color: #f3f7f7;
+}
+.section-warning {
+  background: #f4811f;
+  color: #f3f7f7;
+}
+
+.container {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: unset;
+}
+
+h1 {
+  font-size: 40px;
+}
+h1.english {
+  font-size: 24px;
+}
+h1.thin {
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 30px;
+}
+h2:first-of-type:before {
+  content: "";
+  border: solid 3px #008163;
+  width: 100px;
+  display: block;
+  position: relative;
+}
+h2.english {
+  font-size: 16px;
+}
+h2.thin {
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+}
+h3.english {
+  font-size: 12px;
+}
+h3.thin {
+  font-weight: 500;
+}
+
+.button {
+  padding: 5px 25px;
+  display: inline-block;
+  margin-right: 10px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  border: solid 1px #f4811f;
+}
+.button-dark {
+  border-color: #f3f7f7;
+  font-weight: 500;
+}
+.button-warning {
+  background: #f4811f;
+  color: #f3f7f7;
+  font-weight: 500;
+}
+.button-primary {
+  background: #008163;
+  color: #f3f7f7;
+}
+.button-danger {
+  background: #ee2526;
+  color: #f3f7f7;
+}
+
+.color-chip {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.color-tag {
+  width: 70px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.color-block {
+  width: 35px;
+  height: 35px;
+  border: solid 2px white;
+  display: inline-block;
+  vertical-align: middle;
+}
+.color-block-primary {
+  background-color: #008163;
+}
+.color-block-warning {
+  background-color: #f4811f;
+}
+.color-block-light {
+  background-color: #f3f7f7;
+}
+.color-block-danger {
+  background-color: #ee2526;
+}/*# sourceMappingURL=all.css.map */
