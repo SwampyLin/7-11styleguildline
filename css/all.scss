@@ -9,47 +9,55 @@ $max-content-width: 768px;
   width: $w;
   height: $h;
 }
+@mixin center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 html,
 body {
   padding: unset;
   margin: unset;
-  font-family: 'Exo', 微軟正黑體;
+  font-family: "Exo", 微軟正黑體;
 }
 
 .header {
   height: 300px;
   background-color: $color-warning;
   position: relative;
+
   .icon {
     width: 150px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    @include center();
   }
 }
 
 .section {
   padding: 50px;
+
   &-light {
-    background: $color-light;
+    background-color: $color-light;
     color: $color-danger;
     .english {
       color: $color-danger;
     }
   }
+
   &-dark {
     .english {
       color: $color-primary;
     }
   }
+
   &-danger {
-    background: $color-danger;
+    background-color: $color-danger;
     color: $color-light;
   }
+
   &-warning {
-    background: $color-warning;
+    background-color: $color-warning;
     color: $color-light;
   }
 }
@@ -60,7 +68,6 @@ body {
   margin-right: auto;
 }
 
-//字體
 h1,
 h2,
 h3,
@@ -83,16 +90,25 @@ h1 {
 
 h2 {
   font-size: $font-base-size * 3;
-  &:first-of-type:before {
-    content: '';
-    border: solid 3px $color-primary;
-    width: 100px;
-    display: block;
+
+  &:first-of-type {
     position: relative;
+
+    &:before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      content: "";
+      border: solid 3px $color-primary;
+      width: 100px;
+      display: block;
+    }
   }
+
   &.english {
     font-size: $font-base-size * 1.6;
   }
+
   &.thin {
     font-weight: 500;
   }
@@ -100,14 +116,16 @@ h2 {
 
 h3 {
   font-size: $font-base-size * 2;
+
   &.english {
     font-size: $font-base-size * 1.2;
   }
+
   &.thin {
     font-weight: 500;
   }
 }
-//按鈕
+
 .button {
   padding: 5px 25px;
   display: inline-block;
@@ -116,25 +134,29 @@ h3 {
   font-size: $font-base-size * 1.5;
   font-weight: bold;
   border: solid 1px $color-warning;
+
   &-dark {
     border-color: $color-light;
     font-weight: 500;
   }
+
   &-warning {
-    background: $color-warning;
+    background-color: $color-warning;
     color: $color-light;
     font-weight: 500;
   }
+
   &-primary {
-    background: $color-primary;
+    background-color: $color-primary;
     color: $color-light;
   }
+
   &-danger {
-    background: $color-danger;
+    background-color: $color-danger;
     color: $color-light;
   }
 }
-//color
+
 .color-chip {
   display: inline-block;
   margin-right: 25px;
@@ -149,15 +171,19 @@ h3 {
   border: solid 2px white;
   display: inline-block;
   vertical-align: middle;
+
   &-primary {
     background-color: $color-primary;
   }
+
   &-warning {
     background-color: $color-warning;
   }
+
   &-light {
     background-color: $color-light;
   }
+
   &-danger {
     background-color: $color-danger;
   }
